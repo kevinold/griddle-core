@@ -1,14 +1,14 @@
-var DataStore = require('../../js/stores/local-data-store');
+var DataStore = require('../../js/stores/data-store');
 var AppDispatcher = require('../../js/dispatcher/app-dispatcher');
 var Constants = require('../../js/constants/constants');
 var _ = require('lodash');
 var rewire = require('rewire');
-var ScrollStore = rewire('../../js/stores/scroll-store');
-ScrollStore.dispatchToken = "hi";
+//var ScrollStore = rewire('../../js/stores/scroll-store');
+//ScrollStore.dispatchToken = "hi";
 
 describe("LocalDataStore", function() {
   beforeEach(function(){
-    this.LocalDataStore = rewire('../../js/stores/local-data-store');
+    this.LocalDataStore = rewire('../../js/stores/data-store');
     this.registeredCallback = this.LocalDataStore.__get__("registeredCallback");
   });
 
